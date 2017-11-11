@@ -6,9 +6,9 @@ return function (context, callback) {
   var url = 'https://api.telegram.org/bot' + context.secrets.TOKEN + '/sendMessage';
 
   var text = 'New contact request:\n' +
-    'From: _' + context.body.name + '_\n' +
-    'Contact: _' + context.body.contact + '_\n' +
-    'Message: *' + context.body.message + '*';
+    '*From: *' + context.body.name + '\n' +
+    '*Contact: *' + context.body.contact + '\n' +
+    '*Message: *' + context.body.message ;
 
   var payload = {
     url: url,
